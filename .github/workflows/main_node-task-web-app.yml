@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'node-task-web-app'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_674ADF7491E14E5AA6E1CAAA6B7CC2F6 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5BA224B07CE7432E809D476A22868D20 }}
           package: .
