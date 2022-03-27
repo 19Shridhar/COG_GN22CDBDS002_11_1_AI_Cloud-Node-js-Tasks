@@ -54,7 +54,7 @@ app.post("/output", (req, res)=>{
     res.write('<br>');
     res.write('<br>');
 
-    res.write('<b>Original sentence with all the words reversed : </b>');
+    res.write('<b>Original sentence with no repeated words : </b>');
     res.write(utils.joinWords(utils.removeDuplicates(wordsArray)));
     res.write('<br>');
     res.write('<br>');
