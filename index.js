@@ -2,7 +2,7 @@ const express=require('express');
 const path=require('path')
 
 
-const utils=require('./utils/func.js');
+const utils=require('./src/utils/func.js');
 const fs = require('fs');
 
 
@@ -14,9 +14,10 @@ const port=process.env.PORT || 3000
 app.use(express.urlencoded())
 app.use(express.json())
 
+console.log(__dirname)
 
 app.get('/',(req,res)=>{
-    res.sendFile('D:/Cloud-AI/Tasks/node-js-task/public/index.html')
+    res.sendFile(__dirname+'/public/index.html')
 })
 
 app.post("/output", (req, res)=>{

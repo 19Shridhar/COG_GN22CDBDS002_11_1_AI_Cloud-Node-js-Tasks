@@ -31,7 +31,7 @@ const joinWordsWithComma = (inputArray)=>{
 
 const joinNumbersFoundInInputWithComma =(inputArray)=>{
 
-    if (inputArray.length===0){
+    if (!inputArray){
         return 'No numbers Found';
     }
     else{
