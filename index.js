@@ -28,17 +28,17 @@ app.post("/output", (req, res)=>{
     res.write('<b>Recived Input: </b>'+sentence);
     res.write('<br>')
     res.write('<br>')
-    res.write('<b>Sentence Segmentation: Each sentence is comma separated:-  </b>')
+    res.write('<b>Sentence Segmentation: Each sentence is Hiphen separated:-  </b>')
 
     const sentenceArray=utils.sentenceSegmentation(sentence);
-    res.write(utils.joinSentencesWithComma(sentenceArray))
+    res.write(utils.joinSentencesWithHiphen(sentenceArray))
     res.write('<br>');
     res.write('<br>');
 
  
     const wordsArray=utils.wordSegmentation(sentenceArray);
-    res.write('<b>Word Segmentation: Each Word is comma separated:-  </b>')
-    res.write(utils.joinWordsWithComma(wordsArray))
+    res.write('<b>Word Segmentation: Each Word is Hiphen separated:-  </b>')
+    res.write(utils.joinWordsWithHiphen(wordsArray))
     res.write('<br>');
     res.write('<br>');
 
@@ -60,7 +60,7 @@ app.post("/output", (req, res)=>{
     res.write('<br>');
 
     res.write('<b>Numbers found in original sentence: </b>');
-    res.write(utils.joinNumbersFoundInInputWithComma(utils.extractNumber(sentence)))
+    res.write(utils.joinNumbersFoundInInputWithHiphen(utils.extractNumber(sentence)))
     res.write('<br>');
     res.write('<br>');
 

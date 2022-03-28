@@ -12,31 +12,31 @@ const reverseString = (string)=>{
 
 }
 
-const joinSentencesWithComma =(inputArray)=>{
+const joinSentencesWithHiphen =(inputArray)=>{
 
-    return inputArray.join(', ')
+    return inputArray.join('--')
 }
 
-const joinWordsWithComma = (inputArray)=>{
+const joinWordsWithHiphen = (inputArray)=>{
     
     var tempArray=new Array();
     
     inputArray.forEach(element=>{
-        var temp=element.join(', ');
+        var temp=element.join('--');
         tempArray.push(temp);
     })
-
-    return tempArray.join(',');
+    var out=tempArray.join('--');
+    return out.replace(',','')
 }
 
-const joinNumbersFoundInInputWithComma =(inputArray)=>{
+const joinNumbersFoundInInputWithHiphen =(inputArray)=>{
 
     if (!inputArray){
         return 'No numbers Found';
     }
     else{
 
-        return inputArray.join(',')
+        return inputArray.join('--')
     }
 
 }
@@ -56,6 +56,8 @@ const joinWords=(words=>{
 })
 
 const sentenceSegmentation = (sentence)=>{
+
+    sentence=sentence.replace('?','.')
       
     var segmentedArray = sentence.split(".");
     
@@ -73,7 +75,8 @@ const wordSegmentation = (sentences)=>{
     var newArray=new Array();
 
     sentences.forEach(element => {
-
+        var word=
+        
         newArray.push(element.trim().split(' '));
       });
 
@@ -145,9 +148,9 @@ const extractNumber = (sentence)=>{
 }
 
 module.exports={
-    joinSentencesWithComma,
-    joinWordsWithComma,
-    joinNumbersFoundInInputWithComma,
+    joinSentencesWithHiphen,
+    joinWordsWithHiphen,
+    joinNumbersFoundInInputWithHiphen,
     joinWords,
     reverseWords,
     sentenceSegmentation,
